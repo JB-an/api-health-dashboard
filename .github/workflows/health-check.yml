@@ -4,7 +4,7 @@ on:
   # 定時執行：每天 UTC 01:00 (台北時間 09:00)
   schedule:
     - cron: '0 1 * * *'
-  
+
   # 手動觸發
   workflow_dispatch:
 
@@ -22,7 +22,7 @@ permissions:
 jobs:
   health-check:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -49,7 +49,7 @@ jobs:
           EOF
 
       - name: Run API Health Test
-              continue-on-error: true
+        continue-on-error: true
         run: python api_health_test.py
 
       - name: Remove config.json (security)
@@ -70,24 +70,19 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          ref: main  # 確保取得最新的 commit
-
-      - name: Pull latest changes
-        run: git pull origin main
-
+      
       - name: Setup Pages
         uses: actions/configure-pages@v4
-
+      
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
-
+      
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
