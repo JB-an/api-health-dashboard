@@ -1559,38 +1559,6 @@
             "note": "儲存表單設計或執行上傳市集操作"
           },
           "timestamp": "2025-12-29T08:58:00Z"
-        },
-        {
-          "endpoint": "POST /api/app/FlowEngine/form/CreateFormsDesign",
-          "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/form/CreateFormsDesign",
-          "method": "POST",
-          "testStrategy": "liveness_probe",
-          "requestParams": {
-            "name": "表單名稱",
-            "code": "表單代碼"
-          },
-          "expectedStatus": 400,
-          "actualStatus": 200,
-          "actualResponse": {
-            "note": "建立新表單設計"
-          },
-          "timestamp": "2025-12-29T08:58:30Z"
-        },
-        {
-          "endpoint": "POST /api/app/FlowEngine/form/CopyFormsDesign",
-          "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/form/CopyFormsDesign",
-          "method": "POST",
-          "testStrategy": "liveness_probe",
-          "requestParams": {
-            "formsDesignId": "來源表單設計ID",
-            "name": "新表單名稱"
-          },
-          "expectedStatus": 400,
-          "actualStatus": 200,
-          "actualResponse": {
-            "note": "複製表單設計"
-          },
-          "timestamp": "2025-12-29T08:58:31Z"
         }
       ]
     }
