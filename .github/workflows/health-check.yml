@@ -1,0 +1,92 @@
+name: API Health Check
+
+on:
+  # 定時執行：每天 UTC 01:00 (台北時間 09:00)
+  schedule:
+    - cron: '0 1 * * *'
+  
+  # 手動觸發
+  workflow_dispatch:
+
+  # 推送到 main 分支時也執行
+  push:
+    branches:
+      - main
+
+# 設定權限
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  health-check:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Create config.json from secrets
+        run: |
+          cat > config.json << EOF
+          {
+            "base_url": "${{ secrets.CONFIG_BASE_URL }}",
+            "tenant": "${{ secrets.CONFIG_TENANT }}",
+            "account": "${{ secrets.CONFIG_ACCOUNT }}",
+            "password": "${{ secrets.CONFIG_PASSWORD }}",
+            "sla_threshold_ms": 10000,
+            "sla_first_call_threshold_ms": 15000
+          }
+          EOF
+
+      - name: Run API Health Test
+        run: python api_health_test.py
+
+      - name: Remove config.json (security)
+        run: rm -f config.json
+
+      - name: Commit and push test results
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add test-result.json
+          git diff --staged --quiet || git commit -m "🩺 Update API health test results [skip ci]"
+          git push
+
+  deploy:
+    needs: health-check
+    runs-on: ubuntu-latest
+    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main  # 確保取得最新的 commit
+
+      - name: Pull latest changes
+        run: git pull origin main
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

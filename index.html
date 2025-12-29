@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="API 健康度檢測儀表板 - 監控 API 運行狀態與效能">
+  <title>API 健康度檢測儀表板</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🩺</text></svg>">
+</head>
+<body>
+  <div class="container" id="app">
+    <!-- 載入狀態 -->
+    <div class="loading" id="loading">
+      <div class="loading__spinner"></div>
+      <p class="loading__text">正在載入測試結果...</p>
+    </div>
+
+    <!-- 錯誤狀態 -->
+    <div class="error-state" id="error" style="display: none;">
+      <div class="error-state__icon">⚠️</div>
+      <h2 class="error-state__title">無法載入資料</h2>
+      <p class="error-state__message">請確認 test-result.json 檔案存在且格式正確。</p>
+    </div>
+
+    <!-- 主內容 -->
+    <main id="content" style="display: none;">
+      <!-- 標題區域 -->
+      <header class="header">
+        <h1 class="header__title">🩺 API 健康度檢測</h1>
+        <p class="header__subtitle">自動化 API 健康狀態監控儀表板</p>
+        <span class="header__environment" id="environment"></span>
+      </header>
+
+      <!-- 健康度圓環 -->
+      <section class="health-score">
+        <div class="health-score__ring">
+          <svg viewBox="0 0 200 200">
+            <circle class="health-score__ring-bg" cx="100" cy="100" r="90"></circle>
+            <circle class="health-score__ring-progress" id="score-ring" cx="100" cy="100" r="90"></circle>
+          </svg>
+          <div class="health-score__value">
+            <span class="health-score__percentage" id="score-percentage">--</span>
+            <span class="health-score__label">健康度</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- 統計卡片 -->
+      <section class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-card__icon stat-card__icon--total">📊</div>
+          <div class="stat-card__value" id="stat-total">--</div>
+          <div class="stat-card__label">總 API 數量</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__icon stat-card__icon--success">✅</div>
+          <div class="stat-card__value" id="stat-success">--</div>
+          <div class="stat-card__label">成功</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__icon stat-card__icon--failure">❌</div>
+          <div class="stat-card__value" id="stat-failure">--</div>
+          <div class="stat-card__label">失敗</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__icon stat-card__icon--time">⏱️</div>
+          <div class="stat-card__value" id="stat-avgtime">--</div>
+          <div class="stat-card__label">平均回應時間</div>
+        </div>
+      </section>
+
+      <!-- 警告與錯誤 -->
+      <section class="alerts-section" id="alerts-section"></section>
+
+      <!-- 篩選器與資訊 -->
+      <div class="actions">
+        <div class="filter-group">
+          <button class="filter-btn active" data-filter="all">全部</button>
+          <button class="filter-btn" data-filter="success">成功</button>
+          <button class="filter-btn" data-filter="failure">失敗</button>
+        </div>
+        <div class="refresh-info">
+          <span class="refresh-info__dot"></span>
+          <span>最後更新：<span id="last-update">--</span></span>
+        </div>
+      </div>
+
+      <!-- 結果表格 -->
+      <section class="results-section">
+        <div class="results-section__header">
+          <h2 class="results-section__title">詳細測試結果</h2>
+        </div>
+        <table class="results-table">
+          <thead>
+            <tr>
+              <th>狀態</th>
+              <th>方法</th>
+              <th>Endpoint</th>
+              <th>策略</th>
+              <th>回應時間</th>
+            </tr>
+          </thead>
+          <tbody id="results-body">
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <!-- 頁尾 -->
+    <footer class="footer">
+      <p>API 健康度檢測儀表板 · 由 <a href="https://github.com" target="_blank">GitHub Actions</a> 自動更新</p>
+    </footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
