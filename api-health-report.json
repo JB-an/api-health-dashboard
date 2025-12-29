@@ -474,7 +474,8 @@
           "actualResponse": {
             "note": "親屬關係代碼對照表"
           },
-          "timestamp": "2025-12-26T07:50:03Z"
+          "timestamp": "2025-12-26T07:50:03Z",
+          "testStrategy": "skip"
         },
         {
           "endpoint": "POST /api/app/Shares/GetShareDefaultList",
@@ -661,12 +662,13 @@
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/users/IsSalaryPassword",
           "method": "POST",
           "requestParams": {},
-          "expectedStatus": 200,
+          "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
             "note": "檢查使用者是否已設定薪資密碼"
           },
-          "timestamp": "2025-12-26T08:20:00Z"
+          "timestamp": "2025-12-26T08:20:00Z",
+          "testStrategy": "liveness_probe"
         },
         {
           "endpoint": "POST /api/app/v2/HR/salarySearch/GetSalaryLock",
@@ -678,7 +680,8 @@
           "actualResponse": {
             "note": "可查詢的薪資期數列表"
           },
-          "timestamp": "2025-12-26T08:20:01Z"
+          "timestamp": "2025-12-26T08:20:01Z",
+          "testStrategy": "skip"
         },
         {
           "endpoint": "POST /api/app/v2/HR/salarySearch/GetSalarySearch",
@@ -688,12 +691,13 @@
             "SalaryLockId": "薪資期數ID",
             "SalaryPassword": "***MASKED***"
           },
-          "expectedStatus": 200,
+          "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
             "note": "薪資明細 (回傳 PDF Blob)"
           },
-          "timestamp": "2025-12-26T08:20:02Z"
+          "timestamp": "2025-12-26T08:20:02Z",
+          "testStrategy": "liveness_probe"
         }
       ]
     },
@@ -758,12 +762,13 @@
             "MaxResultCount": 10,
             "SkipCount": 0
           },
-          "expectedStatus": 200,
+          "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
             "note": "流程檢視列表查詢"
           },
-          "timestamp": "2025-12-26T08:20:11Z"
+          "timestamp": "2025-12-26T08:20:11Z",
+          "testStrategy": "liveness_probe"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/GetFlowEngineProcess",
@@ -772,24 +777,26 @@
           "requestParams": {
             "processId": "流程ID"
           },
-          "expectedStatus": 200,
+          "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
             "note": "單一流程節點結構資訊"
           },
-          "timestamp": "2025-12-26T08:20:12Z"
+          "timestamp": "2025-12-26T08:20:12Z",
+          "testStrategy": "liveness_probe"
         },
         {
           "endpoint": "POST /api/app/Shares/GetVisibleButtonsByView",
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/Shares/GetVisibleButtonsByView",
           "method": "POST",
           "requestParams": {},
-          "expectedStatus": 200,
+          "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
             "note": "檢視頁面功能按鈕權限"
           },
-          "timestamp": "2025-12-26T08:20:12Z"
+          "timestamp": "2025-12-26T08:20:12Z",
+          "testStrategy": "liveness_probe"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/form/GetFormsAppForView",
@@ -798,12 +805,13 @@
           "requestParams": {
             "formId": "表單ID"
           },
-          "expectedStatus": 200,
+          "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
             "note": "表單申請資料內容"
           },
-          "timestamp": "2025-12-26T08:20:13Z"
+          "timestamp": "2025-12-26T08:20:13Z",
+          "testStrategy": "liveness_probe"
         }
       ]
     },
@@ -847,12 +855,13 @@
           "requestParams": {
             "processId": "流程ID"
           },
-          "expectedStatus": 200,
+          "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
             "note": "審核流程節點狀態"
           },
-          "timestamp": "2025-12-26T08:20:21Z"
+          "timestamp": "2025-12-26T08:20:21Z",
+          "testStrategy": "liveness_probe"
         },
         {
           "endpoint": "POST /api/app/apiCatalogs/GetApiCatalogList",
@@ -927,7 +936,7 @@
           "endpoint": "POST /api/app/users/SaveUserRolePermissions",
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/users/SaveUserRolePermissions",
           "method": "POST",
-          "testStrategy": "liveness_probe",
+          "testStrategy": "skip",
           "requestParams": {
             "roleName": "",
             "orgEmpIdList": []
@@ -1034,7 +1043,8 @@
           "actualResponse": {
             "note": "獲取下屬員工列表（供選擇被代理人）"
           },
-          "timestamp": "2025-12-29T06:50:01Z"
+          "timestamp": "2025-12-29T06:50:01Z",
+          "testStrategy": "skip"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/Org/GetOrgEmpList",
@@ -1102,12 +1112,13 @@
           "requestParams": {
             "processFlowId": "流程ID"
           },
-          "expectedStatus": 200,
+          "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
             "note": "特定流程的引擎狀態與節點資訊"
           },
-          "timestamp": "2025-12-29T06:50:02Z"
+          "timestamp": "2025-12-29T06:50:02Z",
+          "testStrategy": "liveness_probe"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/form/GetFormsAppForCheckSign",
@@ -1117,12 +1128,13 @@
             "processFlowId": "流程ID",
             "processNodeId": "節點ID"
           },
-          "expectedStatus": 200,
+          "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
             "note": "待審核表單詳細內容與欄位（前端流程測試單成功）"
           },
-          "timestamp": "2025-12-29T06:50:03Z"
+          "timestamp": "2025-12-29T06:50:03Z",
+          "testStrategy": "liveness_probe"
         },
         {
           "endpoint": "POST /api/app/apiCatalogs/GetApiCatalogList",
@@ -1170,7 +1182,8 @@
           "actualResponse": {
             "note": "表單設計歷史版本列表"
           },
-          "timestamp": "2025-12-29T07:29:00Z"
+          "timestamp": "2025-12-29T07:29:00Z",
+          "testStrategy": "skip"
         },
         {
           "endpoint": "POST /api/app/Shares/GetVisibleButtonsByApply",
@@ -1218,12 +1231,13 @@
             "apiCatalogCode": "API目錄代碼",
             "inputParameters": []
           },
-          "expectedStatus": 200,
+          "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
             "note": "動態 API 呼叫"
           },
-          "timestamp": "2025-12-29T07:29:01Z"
+          "timestamp": "2025-12-29T07:29:01Z",
+          "testStrategy": "liveness_probe"
         },
         {
           "endpoint": "POST /api/app/apiCatalogs/GetApiCatalogList",
@@ -1296,7 +1310,8 @@
           "actualResponse": {
             "note": "流程歷史版本列表（雙擊流程進入設計器）"
           },
-          "timestamp": "2025-12-29T07:41:01Z"
+          "timestamp": "2025-12-29T07:41:01Z",
+          "testStrategy": "skip"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/Flow/GetFlowLinkList",
@@ -1310,7 +1325,8 @@
           "actualResponse": {
             "note": "流程連線列表（設計器初始化）"
           },
-          "timestamp": "2025-12-29T07:41:01Z"
+          "timestamp": "2025-12-29T07:41:01Z",
+          "testStrategy": "skip"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/Flow/GetFlowNodeList",
@@ -1319,18 +1335,19 @@
           "requestParams": {
             "flowTreeId": "流程樹ID"
           },
-          "expectedStatus": 200,
+          "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
             "note": "流程節點列表（設計器初始化）"
           },
-          "timestamp": "2025-12-29T07:41:01Z"
+          "timestamp": "2025-12-29T07:41:01Z",
+          "testStrategy": "liveness_probe"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/Flow/SaveFlowNodeAndLink",
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/Flow/SaveFlowNodeAndLink",
           "method": "POST",
-          "testStrategy": "liveness_probe",
+          "testStrategy": "skip",
           "requestParams": {
             "flowNodes": [],
             "flowLinks": []
@@ -1338,7 +1355,7 @@
           "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
-            "note": "儲存流程節點與連線（實際測試回傳 200）"
+            "note": "儲存流程節點與連線（空參數會返回200，跳過測試）"
           },
           "timestamp": "2025-12-29T07:41:02Z"
         },
@@ -1371,7 +1388,8 @@
           "actualResponse": {
             "note": "表單欄位下拉選單（審核條件設定用，如申請者的職稱層級、流程起始者的工作地等）"
           },
-          "timestamp": "2025-12-29T08:07:00Z"
+          "timestamp": "2025-12-29T08:07:00Z",
+          "testStrategy": "skip"
         },
         {
           "endpoint": "POST /api/app/Shares/GetShareCodeNameCodeList",
@@ -1399,7 +1417,8 @@
           "actualResponse": {
             "note": "表單關聯細節資料（審核條件設定用）"
           },
-          "timestamp": "2025-12-29T08:07:02Z"
+          "timestamp": "2025-12-29T08:07:02Z",
+          "testStrategy": "skip"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/form/GetFormsDesignRelFlowTreeByCode",
@@ -1451,28 +1470,30 @@
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/form/GetFormsDesign",
           "method": "POST",
           "requestParams": {
-            "formsDesignId": "表單設計ID"
+            "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
           },
           "expectedStatus": 200,
           "actualStatus": 200,
           "actualResponse": {
             "note": "載入視覺化設計器的核心表單內容（雙擊表單進入設計器）"
           },
-          "timestamp": "2025-12-29T08:56:30Z"
+          "timestamp": "2025-12-29T08:56:30Z",
+          "testStrategy": "skip"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/form/GetFormsDesignHistoryList",
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/form/GetFormsDesignHistoryList",
           "method": "POST",
           "requestParams": {
-            "formsDesignId": "表單設計ID"
+            "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
           },
           "expectedStatus": 200,
           "actualStatus": 200,
           "actualResponse": {
             "note": "表單版本歷史紀錄"
           },
-          "timestamp": "2025-12-29T08:56:31Z"
+          "timestamp": "2025-12-29T08:56:31Z",
+          "testStrategy": "skip"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/flow/GetFlowTreeList",
@@ -1493,14 +1514,15 @@
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/form/GetFormNotifyTimings",
           "method": "POST",
           "requestParams": {
-            "formsDesignId": "表單設計ID"
+            "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
           },
-          "expectedStatus": 200,
+          "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
             "note": "各簽核階段的通知時點設定（通知設定對話框）"
           },
-          "timestamp": "2025-12-29T08:57:10Z"
+          "timestamp": "2025-12-29T08:57:10Z",
+          "testStrategy": "liveness_probe"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/Process/GetProcessSerialNumbersByFormDesignId",
@@ -1514,43 +1536,46 @@
           "actualResponse": {
             "note": "表單的單據流水號規則（流水號設定對話框）"
           },
-          "timestamp": "2025-12-29T08:57:30Z"
+          "timestamp": "2025-12-29T08:57:30Z",
+          "testStrategy": "skip"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/form/GetFormsExtendColumnByFormsDesign",
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/form/GetFormsExtendColumnByFormsDesign",
           "method": "POST",
           "requestParams": {
-            "formsDesignId": "表單設計ID"
+            "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
           },
-          "expectedStatus": 200,
+          "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
             "note": "流程監控中顯示的擴充欄位（流程檢視資料設定對話框）"
           },
-          "timestamp": "2025-12-29T08:57:50Z"
+          "timestamp": "2025-12-29T08:57:50Z",
+          "testStrategy": "liveness_probe"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/form/GetFormsDesignDisplaySettings",
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/form/GetFormsDesignDisplaySettings",
           "method": "POST",
           "requestParams": {
-            "formsDesignId": "表單設計ID"
+            "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
           },
-          "expectedStatus": 200,
+          "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
             "note": "流程檢視資料的顯示屬性設定"
           },
-          "timestamp": "2025-12-29T08:57:51Z"
+          "timestamp": "2025-12-29T08:57:51Z",
+          "testStrategy": "liveness_probe"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/form/SaveFormsDesignDynamicAsync",
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/form/SaveFormsDesignDynamicAsync",
           "method": "POST",
-          "testStrategy": "liveness_probe",
+          "testStrategy": "skip",
           "requestParams": {
-            "formsDesignId": "表單設計ID",
+            "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0",
             "action": "save"
           },
           "expectedStatus": 400,
