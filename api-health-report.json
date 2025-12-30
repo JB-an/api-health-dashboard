@@ -466,16 +466,19 @@
         },
         {
           "endpoint": "GET /api/app/v2/HR/share/GetRelationshipCodeLookup",
-          "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/v2/HR/share/GetRelationshipCodeLookup",
+          "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/v2/HR/share/GetRelationshipCodeLookup?SkipCount=0&MaxResultCount=150",
           "method": "GET",
-          "requestParams": {},
+          "requestParams": {
+            "SkipCount": 0,
+            "MaxResultCount": 150
+          },
           "expectedStatus": 200,
           "actualStatus": 200,
           "actualResponse": {
             "note": "親屬關係代碼對照表"
           },
           "timestamp": "2025-12-26T07:50:03Z",
-          "testStrategy": "skip"
+          "testStrategy": "full_call"
         },
         {
           "endpoint": "POST /api/app/Shares/GetShareDefaultList",
@@ -675,7 +678,7 @@
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/v2/HR/salarySearch/GetSalaryLock",
           "method": "POST",
           "requestParams": {},
-          "expectedStatus": 200,
+          "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
             "note": "可查詢的薪資期數列表"
@@ -746,13 +749,16 @@
           "endpoint": "POST /api/app/FlowEngine/form/NewGetFormsDesignList",
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/form/NewGetFormsDesignList",
           "method": "POST",
-          "requestParams": {},
+          "requestParams": {
+            "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
+          },
           "expectedStatus": 200,
           "actualStatus": 200,
           "actualResponse": {
             "note": "表單設計列表"
           },
-          "timestamp": "2025-12-26T08:20:10Z"
+          "timestamp": "2025-12-26T08:20:10Z",
+          "testStrategy": "full_call"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/GetProcessFlowView",
@@ -840,13 +846,16 @@
           "endpoint": "POST /api/app/FlowEngine/form/NewGetFormsDesignList",
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/form/NewGetFormsDesignList",
           "method": "POST",
-          "requestParams": {},
+          "requestParams": {
+            "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
+          },
           "expectedStatus": 200,
           "actualStatus": 200,
           "actualResponse": {
             "note": "審核頁面表單設計列表"
           },
-          "timestamp": "2025-12-26T08:20:20Z"
+          "timestamp": "2025-12-26T08:20:20Z",
+          "testStrategy": "full_call"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/GetFlowEngineProcess",
@@ -1035,10 +1044,8 @@
           "endpoint": "POST /api/app/FlowEngine/Org/GetSubordinateOrgEmpList",
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/Org/GetSubordinateOrgEmpList",
           "method": "POST",
-          "requestParams": {
-            "OrgEmpCode": "員工ID"
-          },
-          "expectedStatus": 200,
+          "requestParams": {},
+          "expectedStatus": 400,
           "actualStatus": 200,
           "actualResponse": {
             "note": "獲取下屬員工列表（供選擇被代理人）"
@@ -1175,7 +1182,7 @@
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/form/GetFormsDesignHistoryList",
           "method": "POST",
           "requestParams": {
-            "code": "表單代碼"
+            "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
           },
           "expectedStatus": 200,
           "actualStatus": 200,
@@ -1183,7 +1190,7 @@
             "note": "表單設計歷史版本列表"
           },
           "timestamp": "2025-12-29T07:29:00Z",
-          "testStrategy": "skip"
+          "testStrategy": "full_call"
         },
         {
           "endpoint": "POST /api/app/Shares/GetVisibleButtonsByApply",
@@ -1303,7 +1310,7 @@
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/Flow/GetFlowTreeHistoryList",
           "method": "POST",
           "requestParams": {
-            "code": "流程代碼"
+            "code": "c53f961d-a434-4262-9da4-2f00088ae05b"
           },
           "expectedStatus": 200,
           "actualStatus": 200,
@@ -1311,14 +1318,14 @@
             "note": "流程歷史版本列表（雙擊流程進入設計器）"
           },
           "timestamp": "2025-12-29T07:41:01Z",
-          "testStrategy": "skip"
+          "testStrategy": "full_call"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/Flow/GetFlowLinkList",
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/Flow/GetFlowLinkList",
           "method": "POST",
           "requestParams": {
-            "flowTreeId": "流程樹ID"
+            "code": "c53f961d-a434-4262-9da4-2f00088ae05b"
           },
           "expectedStatus": 200,
           "actualStatus": 200,
@@ -1326,7 +1333,7 @@
             "note": "流程連線列表（設計器初始化）"
           },
           "timestamp": "2025-12-29T07:41:01Z",
-          "testStrategy": "skip"
+          "testStrategy": "full_call"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/Flow/GetFlowNodeList",
@@ -1425,14 +1432,15 @@
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/form/GetFormsDesignRelFlowTreeByCode",
           "method": "POST",
           "requestParams": {
-            "code": "表單代碼"
+            "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
           },
           "expectedStatus": 200,
           "actualStatus": 200,
           "actualResponse": {
             "note": "表單設計與流程樹關聯資料"
           },
-          "timestamp": "2025-12-29T08:07:03Z"
+          "timestamp": "2025-12-29T08:07:03Z",
+          "testStrategy": "full_call"
         }
       ]
     },
@@ -1445,13 +1453,16 @@
           "endpoint": "POST /api/app/FlowEngine/form/NewGetFormsDesignList",
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/form/NewGetFormsDesignList",
           "method": "POST",
-          "requestParams": {},
+          "requestParams": {
+            "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
+          },
           "expectedStatus": 200,
           "actualStatus": 200,
           "actualResponse": {
             "note": "表單設計清單"
           },
-          "timestamp": "2025-12-29T07:29:03Z"
+          "timestamp": "2025-12-29T07:29:03Z",
+          "testStrategy": "full_call"
         },
         {
           "endpoint": "POST /api/app/notifiers/GetEmailTemplateList",
@@ -1478,7 +1489,7 @@
             "note": "載入視覺化設計器的核心表單內容（雙擊表單進入設計器）"
           },
           "timestamp": "2025-12-29T08:56:30Z",
-          "testStrategy": "skip"
+          "testStrategy": "full_call"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/form/GetFormsDesignHistoryList",
@@ -1493,7 +1504,7 @@
             "note": "表單版本歷史紀錄"
           },
           "timestamp": "2025-12-29T08:56:31Z",
-          "testStrategy": "skip"
+          "testStrategy": "full_call"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/flow/GetFlowTreeList",
@@ -1529,7 +1540,7 @@
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/FlowEngine/Process/GetProcessSerialNumbersByFormDesignId",
           "method": "POST",
           "requestParams": {
-            "formDesignId": "表單設計ID"
+            "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
           },
           "expectedStatus": 200,
           "actualStatus": 200,
@@ -1537,7 +1548,7 @@
             "note": "表單的單據流水號規則（流水號設定對話框）"
           },
           "timestamp": "2025-12-29T08:57:30Z",
-          "testStrategy": "skip"
+          "testStrategy": "full_call"
         },
         {
           "endpoint": "POST /api/app/FlowEngine/form/GetFormsExtendColumnByFormsDesign",
