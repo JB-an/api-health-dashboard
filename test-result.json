@@ -1,24 +1,15 @@
 {
-  "testDate": "2025-12-30T03:33:55.797175",
+  "testDate": "2025-12-30T04:03:39.791543",
   "environment": "https://deploy.jbhr.com.tw/App/Test/Portal",
   "summary": {
     "totalApis": 94,
-    "successCount": 59,
-    "failureCount": 35,
-    "avgResponseTimeMs": 988.82,
-    "healthScore": "62.8%"
+    "successCount": 91,
+    "failureCount": 3,
+    "avgResponseTimeMs": 395.89,
+    "healthScore": "96.8%"
   },
-  "criticalFailures": [
-    "POST /api/app/FlowEngine/form/NewGetFormsDesignList: 請求超時"
-  ],
-  "warnings": [
-    "POST /api/app/users/IsSalaryPassword: 存活性探測預期 400/422，實際為 503",
-    "POST /api/app/v2/HR/salarySearch/GetSalarySearch: 存活性探測預期 400/422，實際為 503",
-    "POST /api/app/FlowEngine/GetProcessFlowView: 存活性探測預期 400/422，實際為 503",
-    "POST /api/app/FlowEngine/GetFlowEngineProcess: 存活性探測預期 400/422，實際為 503",
-    "POST /api/app/Shares/GetVisibleButtonsByView: 存活性探測預期 400/422，實際為 503",
-    "POST /api/app/FlowEngine/form/GetFormsAppForView: 存活性探測預期 400/422，實際為 503"
-  ],
+  "criticalFailures": [],
+  "warnings": [],
   "detailedResults": [
     {
       "endpoint": "GET /api/app/share/GetUserInfo",
@@ -26,7 +17,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 313.74,
+      "responseTimeMs": 352.84,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -37,7 +28,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 600.5,
+      "responseTimeMs": 679.51,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -48,7 +39,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 192.54,
+      "responseTimeMs": 227.28,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -59,7 +50,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 189.52,
+      "responseTimeMs": 223.89,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -70,7 +61,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 197.74,
+      "responseTimeMs": 236.47,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -81,7 +72,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 252.91,
+      "responseTimeMs": 252.28,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -92,7 +83,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 1479.25,
+      "responseTimeMs": 1543.26,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -103,7 +94,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 449.24,
+      "responseTimeMs": 514.01,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -114,7 +105,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 648.82,
+      "responseTimeMs": 699.92,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -125,7 +116,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 367.87,
+      "responseTimeMs": 438.42,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -136,7 +127,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 807.71,
+      "responseTimeMs": 883.58,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -147,7 +138,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 530.06,
+      "responseTimeMs": 584.39,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -158,7 +149,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 499.05,
+      "responseTimeMs": 557.02,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -169,7 +160,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 1104.35,
+      "responseTimeMs": 1143.28,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -180,7 +171,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 1109.12,
+      "responseTimeMs": 1177.72,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -191,7 +182,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 244.19,
+      "responseTimeMs": 284.74,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -202,7 +193,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 385.55,
+      "responseTimeMs": 462.99,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -213,7 +204,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 205.85,
+      "responseTimeMs": 243.52,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -224,7 +215,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 195.66,
+      "responseTimeMs": 233.42,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -234,9 +225,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 469.68,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 488.06,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -245,9 +236,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 161.95,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 235.57,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -256,9 +247,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 157.93,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 237.86,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -267,9 +258,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 157.79,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 986.74,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -278,9 +269,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 157.99,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 531.69,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -289,9 +280,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 157.84,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 508.86,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -300,9 +291,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 157.83,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 293.35,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -311,9 +302,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 158.14,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 243.65,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -322,9 +313,9 @@
       "method": "GET",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 157.86,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 493.35,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -333,9 +324,9 @@
       "method": "GET",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 158.65,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 480.75,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -344,9 +335,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 157.85,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 232.78,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -355,9 +346,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 158.16,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 293.05,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -366,9 +357,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 157.85,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 397.07,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -377,9 +368,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 158.59,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 711.54,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -388,9 +379,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 157.77,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 578.01,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -399,9 +390,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 157.93,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 551.39,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -410,9 +401,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 157.52,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 241.56,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -421,9 +412,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 158.14,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 834.63,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -432,9 +423,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 157.88,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 575.09,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -443,9 +434,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 158.13,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 256.35,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -454,35 +445,31 @@
       "method": "POST",
       "testStrategy": "liveness_probe",
       "expectedStatus": 400,
-      "actualStatus": 503,
-      "responseTimeMs": 157.78,
-      "isSuccess": false,
+      "actualStatus": 400,
+      "responseTimeMs": 227.95,
+      "isSuccess": true,
       "errorMessage": "",
-      "validationErrors": [
-        "存活性探測預期 400/422，實際為 503"
-      ]
+      "validationErrors": []
     },
     {
       "endpoint": "POST /api/app/v2/HR/salarySearch/GetSalarySearch",
       "method": "POST",
       "testStrategy": "liveness_probe",
       "expectedStatus": 400,
-      "actualStatus": 503,
-      "responseTimeMs": 158.21,
-      "isSuccess": false,
+      "actualStatus": 400,
+      "responseTimeMs": 229.65,
+      "isSuccess": true,
       "errorMessage": "",
-      "validationErrors": [
-        "存活性探測預期 400/422，實際為 503"
-      ]
+      "validationErrors": []
     },
     {
       "endpoint": "POST /api/app/FlowEngine/Org/GetOrgDeptLookup",
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 157.46,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 295.0,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -491,9 +478,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 158.22,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 297.36,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -502,9 +489,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 158.07,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 543.4,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -513,9 +500,9 @@
       "method": "POST",
       "testStrategy": "full_call",
       "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 158.01,
-      "isSuccess": false,
+      "actualStatus": 200,
+      "responseTimeMs": 288.25,
+      "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
     },
@@ -524,73 +511,10 @@
       "method": "POST",
       "testStrategy": "liveness_probe",
       "expectedStatus": 400,
-      "actualStatus": 503,
-      "responseTimeMs": 157.98,
-      "isSuccess": false,
+      "actualStatus": 400,
+      "responseTimeMs": 229.89,
+      "isSuccess": true,
       "errorMessage": "",
-      "validationErrors": [
-        "存活性探測預期 400/422，實際為 503"
-      ]
-    },
-    {
-      "endpoint": "POST /api/app/FlowEngine/GetFlowEngineProcess",
-      "method": "POST",
-      "testStrategy": "liveness_probe",
-      "expectedStatus": 400,
-      "actualStatus": 503,
-      "responseTimeMs": 158.02,
-      "isSuccess": false,
-      "errorMessage": "",
-      "validationErrors": [
-        "存活性探測預期 400/422，實際為 503"
-      ]
-    },
-    {
-      "endpoint": "POST /api/app/Shares/GetVisibleButtonsByView",
-      "method": "POST",
-      "testStrategy": "liveness_probe",
-      "expectedStatus": 400,
-      "actualStatus": 503,
-      "responseTimeMs": 157.53,
-      "isSuccess": false,
-      "errorMessage": "",
-      "validationErrors": [
-        "存活性探測預期 400/422，實際為 503"
-      ]
-    },
-    {
-      "endpoint": "POST /api/app/FlowEngine/form/GetFormsAppForView",
-      "method": "POST",
-      "testStrategy": "liveness_probe",
-      "expectedStatus": 400,
-      "actualStatus": 503,
-      "responseTimeMs": 206.59,
-      "isSuccess": false,
-      "errorMessage": "",
-      "validationErrors": [
-        "存活性探測預期 400/422，實際為 503"
-      ]
-    },
-    {
-      "endpoint": "POST /api/app/FlowEngine/GetProcessFlowWaitSign",
-      "method": "POST",
-      "testStrategy": "full_call",
-      "expectedStatus": 200,
-      "actualStatus": 503,
-      "responseTimeMs": 157.83,
-      "isSuccess": false,
-      "errorMessage": "",
-      "validationErrors": []
-    },
-    {
-      "endpoint": "POST /api/app/FlowEngine/form/NewGetFormsDesignList",
-      "method": "POST",
-      "testStrategy": "full_call",
-      "expectedStatus": 200,
-      "actualStatus": 0,
-      "responseTimeMs": 30031.35,
-      "isSuccess": false,
-      "errorMessage": "請求超時",
       "validationErrors": []
     },
     {
@@ -599,7 +523,62 @@
       "testStrategy": "liveness_probe",
       "expectedStatus": 400,
       "actualStatus": 400,
-      "responseTimeMs": 2918.79,
+      "responseTimeMs": 227.9,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": []
+    },
+    {
+      "endpoint": "POST /api/app/Shares/GetVisibleButtonsByView",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 239.52,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": []
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/form/GetFormsAppForView",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 228.68,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": []
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/GetProcessFlowWaitSign",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 304.95,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": []
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/form/NewGetFormsDesignList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 276.55,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": []
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/GetFlowEngineProcess",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 228.25,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -610,7 +589,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 5827.01,
+      "responseTimeMs": 627.19,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -621,7 +600,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 1028.71,
+      "responseTimeMs": 217.53,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -632,7 +611,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 4311.88,
+      "responseTimeMs": 307.83,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -643,7 +622,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 2123.84,
+      "responseTimeMs": 493.57,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -654,7 +633,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 995.15,
+      "responseTimeMs": 233.78,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -665,7 +644,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 285.08,
+      "responseTimeMs": 219.48,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -676,7 +655,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 445.3,
+      "responseTimeMs": 235.61,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -687,7 +666,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 1088.24,
+      "responseTimeMs": 679.11,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -698,7 +677,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 453.18,
+      "responseTimeMs": 429.42,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -709,7 +688,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 208.32,
+      "responseTimeMs": 236.64,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -720,7 +699,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 515.21,
+      "responseTimeMs": 299.4,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -731,7 +710,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 267.52,
+      "responseTimeMs": 304.94,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -742,7 +721,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 426.88,
+      "responseTimeMs": 294.74,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -753,7 +732,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 3693.05,
+      "responseTimeMs": 261.94,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -764,7 +743,7 @@
       "testStrategy": "liveness_probe",
       "expectedStatus": 400,
       "actualStatus": 400,
-      "responseTimeMs": 198.07,
+      "responseTimeMs": 243.71,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -775,7 +754,7 @@
       "testStrategy": "liveness_probe",
       "expectedStatus": 400,
       "actualStatus": 400,
-      "responseTimeMs": 920.12,
+      "responseTimeMs": 229.98,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -786,7 +765,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 748.39,
+      "responseTimeMs": 636.15,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -797,7 +776,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 274.79,
+      "responseTimeMs": 232.43,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -808,7 +787,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 6009.25,
+      "responseTimeMs": 245.09,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -819,7 +798,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 429.85,
+      "responseTimeMs": 253.57,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -830,7 +809,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 384.93,
+      "responseTimeMs": 298.46,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -841,7 +820,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 2514.72,
+      "responseTimeMs": 300.56,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -852,7 +831,7 @@
       "testStrategy": "liveness_probe",
       "expectedStatus": 400,
       "actualStatus": 400,
-      "responseTimeMs": 195.15,
+      "responseTimeMs": 230.99,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -863,7 +842,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 602.33,
+      "responseTimeMs": 630.4,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -874,7 +853,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 204.68,
+      "responseTimeMs": 243.28,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -885,7 +864,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 1681.15,
+      "responseTimeMs": 248.92,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -896,7 +875,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 964.72,
+      "responseTimeMs": 346.82,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -907,7 +886,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 493.47,
+      "responseTimeMs": 247.31,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -918,7 +897,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 403,
-      "responseTimeMs": 816.28,
+      "responseTimeMs": 241.0,
       "isSuccess": false,
       "errorMessage": "",
       "validationErrors": []
@@ -929,7 +908,7 @@
       "testStrategy": "liveness_probe",
       "expectedStatus": 400,
       "actualStatus": 400,
-      "responseTimeMs": 238.68,
+      "responseTimeMs": 228.91,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -940,7 +919,7 @@
       "testStrategy": "liveness_probe",
       "expectedStatus": 400,
       "actualStatus": 400,
-      "responseTimeMs": 211.87,
+      "responseTimeMs": 257.18,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -951,7 +930,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 507.9,
+      "responseTimeMs": 542.86,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -962,7 +941,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 214.8,
+      "responseTimeMs": 231.71,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -973,7 +952,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 507.49,
+      "responseTimeMs": 280.99,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -984,7 +963,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 1467.54,
+      "responseTimeMs": 889.66,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -995,7 +974,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 403,
-      "responseTimeMs": 241.0,
+      "responseTimeMs": 244.14,
       "isSuccess": false,
       "errorMessage": "",
       "validationErrors": []
@@ -1006,7 +985,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 203.91,
+      "responseTimeMs": 253.89,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -1017,7 +996,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 200,
-      "responseTimeMs": 296.66,
+      "responseTimeMs": 337.41,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -1028,7 +1007,7 @@
       "testStrategy": "liveness_probe",
       "expectedStatus": 400,
       "actualStatus": 400,
-      "responseTimeMs": 217.37,
+      "responseTimeMs": 227.64,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -1039,7 +1018,7 @@
       "testStrategy": "full_call",
       "expectedStatus": 200,
       "actualStatus": 403,
-      "responseTimeMs": 2309.6,
+      "responseTimeMs": 241.57,
       "isSuccess": false,
       "errorMessage": "",
       "validationErrors": []
@@ -1050,7 +1029,7 @@
       "testStrategy": "liveness_probe",
       "expectedStatus": 400,
       "actualStatus": 400,
-      "responseTimeMs": 246.1,
+      "responseTimeMs": 226.86,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
@@ -1061,7 +1040,7 @@
       "testStrategy": "liveness_probe",
       "expectedStatus": 400,
       "actualStatus": 400,
-      "responseTimeMs": 194.2,
+      "responseTimeMs": 253.33,
       "isSuccess": true,
       "errorMessage": "",
       "validationErrors": []
