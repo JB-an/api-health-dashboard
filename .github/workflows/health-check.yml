@@ -37,12 +37,18 @@ jobs:
 
       - name: Create config.json from secrets
         run: |
+          # 生成動態密碼：前綴 + 當天日期 (yyyyMMdd)
+          # 密碼前綴存在 CONFIG_PASSWORD_PREFIX secret 中
+          # 例如：daisukiJb@20251230
+          TODAY=$(date +%Y%m%d)
+          DYNAMIC_PASSWORD="${{ secrets.CONFIG_PASSWORD_PREFIX }}${TODAY}"
+          
           cat > config.json << EOF
           {
             "base_url": "${{ secrets.CONFIG_BASE_URL }}",
             "tenant": "${{ secrets.CONFIG_TENANT }}",
             "account": "${{ secrets.CONFIG_ACCOUNT }}",
-            "password": "${{ secrets.CONFIG_PASSWORD }}",
+            "password": "${DYNAMIC_PASSWORD}",
             "sla_threshold_ms": 10000,
             "sla_first_call_threshold_ms": 15000
           }
