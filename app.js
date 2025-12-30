@@ -191,6 +191,7 @@ function renderResults(results) {
         const methodClass = result.method.toLowerCase();
         const timeClass = getTimeClass(result.responseTimeMs);
         const endpoint = result.endpoint.replace(/^(GET|POST|PUT|DELETE)\s+/, '');
+        const strategy = getStrategyInfo(result.testStrategy);
 
         return `
       <tr>
@@ -204,7 +205,11 @@ function renderResults(results) {
           <span class="method-badge method-badge--${methodClass}">${result.method}</span>
         </td>
         <td class="endpoint">${escapeHtml(endpoint)}</td>
-        <td>${result.testStrategy || 'full_call'}</td>
+        <td>
+          <span class="strategy-badge strategy-badge--${strategy.class}" title="${strategy.tooltip}">
+            ${strategy.label}
+          </span>
+        </td>
         <td>
           <span class="response-time response-time--${timeClass}">
             ${result.responseTimeMs.toFixed(0)}ms
@@ -215,6 +220,30 @@ function renderResults(results) {
     }).join('');
 
     elements.resultsBody.innerHTML = html;
+}
+
+/**
+ * 取得測試策略資訊
+ */
+function getStrategyInfo(strategy) {
+    const strategies = {
+        'full_call': {
+            label: '完整測試',
+            class: 'full',
+            tooltip: '完整呼叫 API 並驗證回應狀態與內容'
+        },
+        'liveness_probe': {
+            label: '存活探測',
+            class: 'probe',
+            tooltip: '探測 API 是否存活，預期回傳 400/422 驗證錯誤'
+        },
+        'skip': {
+            label: '跳過',
+            class: 'skip',
+            tooltip: '此 API 因權限或特殊原因跳過測試'
+        }
+    };
+    return strategies[strategy] || strategies['full_call'];
 }
 
 /**

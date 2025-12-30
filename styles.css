@@ -409,6 +409,72 @@ body::before {
   color: var(--danger);
 }
 
+/* 策略標籤 */
+.strategy-badge {
+  display: inline-block;
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: help;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.strategy-badge:hover {
+  transform: translateY(-1px);
+}
+
+.strategy-badge--full {
+  background: rgba(16, 185, 129, 0.15);
+  color: var(--success);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.strategy-badge--probe {
+  background: rgba(99, 102, 241, 0.15);
+  color: var(--accent-secondary);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+}
+
+.strategy-badge--skip {
+  background: rgba(107, 114, 128, 0.15);
+  color: var(--text-muted);
+  border: 1px solid rgba(107, 114, 128, 0.3);
+}
+
+/* Tooltip 增強樣式 */
+.strategy-badge[title] {
+  position: relative;
+}
+
+.strategy-badge[title]::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all var(--transition-fast);
+  z-index: 100;
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.strategy-badge[title]:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-4px);
+}
+
 /* Endpoint 樣式 */
 .endpoint {
   font-family: 'Fira Code', 'Consolas', monospace;
