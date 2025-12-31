@@ -501,6 +501,84 @@ body::before {
   color: var(--danger);
 }
 
+/* 手風琴展開效果 */
+.result-row--expandable {
+  cursor: pointer;
+  transition: background var(--transition-fast);
+}
+
+.result-row--expandable:hover {
+  background: rgba(99, 102, 241, 0.08);
+}
+
+.result-row--expanded {
+  background: rgba(99, 102, 241, 0.05);
+}
+
+.expand-icon {
+  display: inline-block;
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--accent-secondary);
+  transition: transform var(--transition-fast);
+}
+
+.result-row--expanded .expand-icon {
+  color: var(--accent-primary);
+}
+
+/* 輸入參數區塊 */
+.result-detail {
+  background: rgba(15, 15, 26, 0.6);
+}
+
+.result-detail td {
+  padding: 0 !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.input-params {
+  padding: 1rem 1.5rem;
+  margin: 0.5rem 1.5rem 1rem;
+  background: rgba(30, 30, 50, 0.5);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  animation: slideDown 0.2s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.input-params__header {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--accent-secondary);
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.input-params__content {
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  white-space: pre-wrap;
+  word-break: break-all;
+  overflow-x: auto;
+}
+
 /* 警告與錯誤區塊 */
 .alerts-section {
   margin-bottom: 2rem;

@@ -664,14 +664,16 @@
           "endpoint": "POST /api/app/users/IsSalaryPassword",
           "fullUrl": "https://deploy.jbhr.com.tw/App/Test/Portal/PortalApi/api/app/users/IsSalaryPassword",
           "method": "POST",
-          "requestParams": {},
-          "expectedStatus": 400,
+          "requestParams": {
+            "orgEmpCode": "***USE_LOGGED_IN_USER_EMP_CODE***"
+          },
+          "expectedStatus": 200,
           "actualStatus": 200,
           "actualResponse": {
-            "note": "檢查使用者是否已設定薪資密碼"
+            "note": "檢查使用者是否已設定薪資密碼，回傳 status: true/false"
           },
-          "timestamp": "2025-12-26T08:20:00Z",
-          "testStrategy": "liveness_probe"
+          "timestamp": "2025-12-30T14:00:00Z",
+          "testStrategy": "full_call"
         },
         {
           "endpoint": "POST /api/app/v2/HR/salarySearch/GetSalaryLock",

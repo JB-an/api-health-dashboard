@@ -185,16 +185,18 @@ function renderAlerts(criticalFailures, warnings) {
 function renderResults(results) {
     const filteredResults = filterResults(results, currentFilter);
 
-    const html = filteredResults.map(result => {
+    const html = filteredResults.map((result, index) => {
         const statusClass = result.isSuccess ? 'success' : 'failure';
         const statusText = result.isSuccess ? '成功' : '失敗';
         const methodClass = result.method.toLowerCase();
         const timeClass = getTimeClass(result.responseTimeMs);
         const endpoint = result.endpoint.replace(/^(GET|POST|PUT|DELETE)\s+/, '');
         const strategy = getStrategyInfo(result.testStrategy);
+        const hasInput = result.requestParams && Object.keys(result.requestParams).length > 0;
+        const rowId = `result-row-${index}`;
 
         return `
-      <tr>
+      <tr class="result-row ${hasInput ? 'result-row--expandable' : ''}" data-row-id="${rowId}">
         <td>
           <span class="status-badge status-badge--${statusClass}">
             <span class="status-badge__dot"></span>
@@ -204,7 +206,10 @@ function renderResults(results) {
         <td>
           <span class="method-badge method-badge--${methodClass}">${result.method}</span>
         </td>
-        <td class="endpoint">${escapeHtml(endpoint)}</td>
+        <td class="endpoint">
+          ${hasInput ? '<span class="expand-icon">▶</span>' : ''}
+          ${escapeHtml(endpoint)}
+        </td>
         <td>
           <span class="strategy-badge strategy-badge--${strategy.class}" title="${strategy.tooltip}">
             ${strategy.label}
@@ -216,10 +221,21 @@ function renderResults(results) {
           </span>
         </td>
       </tr>
+      ${hasInput ? `
+      <tr class="result-detail" id="${rowId}" style="display: none;">
+        <td colspan="5">
+          <div class="input-params">
+            <div class="input-params__header">📥 Request Input</div>
+            <pre class="input-params__content">${formatJson(result.requestParams)}</pre>
+          </div>
+        </td>
+      </tr>
+      ` : ''}
     `;
     }).join('');
 
     elements.resultsBody.innerHTML = html;
+    setupAccordionListeners();
 }
 
 /**
@@ -309,6 +325,45 @@ function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
     return div.innerHTML;
+}
+
+/**
+ * 格式化 JSON 為易讀格式
+ */
+function formatJson(obj) {
+    if (!obj || typeof obj !== 'object') {
+        return escapeHtml(String(obj));
+    }
+    return escapeHtml(JSON.stringify(obj, null, 2));
+}
+
+/**
+ * 設定手風琴事件監聽器
+ */
+function setupAccordionListeners() {
+    const expandableRows = document.querySelectorAll('.result-row--expandable');
+
+    expandableRows.forEach(row => {
+        row.addEventListener('click', () => {
+            const rowId = row.dataset.rowId;
+            const detailRow = document.getElementById(rowId);
+            const expandIcon = row.querySelector('.expand-icon');
+
+            if (detailRow) {
+                const isExpanded = detailRow.style.display !== 'none';
+
+                if (isExpanded) {
+                    detailRow.style.display = 'none';
+                    row.classList.remove('result-row--expanded');
+                    if (expandIcon) expandIcon.textContent = '▶';
+                } else {
+                    detailRow.style.display = 'table-row';
+                    row.classList.add('result-row--expanded');
+                    if (expandIcon) expandIcon.textContent = '▼';
+                }
+            }
+        });
+    });
 }
 
 // 啟動應用程式
