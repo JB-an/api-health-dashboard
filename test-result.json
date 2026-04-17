@@ -1,16 +1,1317 @@
 {
-  "testDate": "2026-04-16T01:30:28.922029",
+  "testDate": "2026-04-17T01:30:20.435394",
   "environment": "https://deploy.jbhr.com.tw/App/Test/Portal",
   "summary": {
-    "totalApis": 0,
-    "successCount": 0,
-    "failureCount": 0,
-    "avgResponseTimeMs": 0.0,
-    "healthScore": "0.0%"
+    "totalApis": 94,
+    "successCount": 90,
+    "failureCount": 4,
+    "avgResponseTimeMs": 531.82,
+    "healthScore": "95.7%"
   },
-  "criticalFailures": [
-    "登入失敗，無法繼續測試"
-  ],
+  "criticalFailures": [],
   "warnings": [],
-  "detailedResults": []
+  "detailedResults": [
+    {
+      "endpoint": "GET /api/app/share/GetUserInfo",
+      "method": "GET",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 289.88,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/systems/GetSystemPageListForReadPermission",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 556.15,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/Shares/GetTenantCompanyPhoto",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 189.79,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "GET /api/app/systems/GetSystemDashboardWidgetLayoutListByUser",
+      "method": "GET",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 182.7,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/systems/GetSystemDashboardListByUserWithPermission",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 229.31,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/users/GetUserBookmarkList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 190.03,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "GET /api/app/NotifyProxy/GetNotifyToken",
+      "method": "GET",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 584.49,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "GET /api/app/v2/HR/personnel/GetEmployeePhoto",
+      "method": "GET",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 625.31,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "GET /api/app/NotifyProxy/api/app/jbnotifier-api/notifications/total-unread-count",
+      "method": "GET",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 715.27,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "ReceiverOuterId": "f4ede7ce-af74-63bd-5fd9-3a1df459a99e"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/systems/GetSystemBoardList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 444.6,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "Sorting": "dateA desc",
+        "MaxResultCount": 10,
+        "SkipCount": 0
+      }
+    },
+    {
+      "endpoint": "POST /api/app/v2/HR/index/GetIndexAbnormal",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 2440.72,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "Date": "",
+        "AbnormalMappings": []
+      }
+    },
+    {
+      "endpoint": "POST /api/app/v2/HR/attend/EmployeeAttendOt",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 934.65,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "EmpId": "62810617-643d-0c39-aafb-3a197b3113fd",
+        "DateA": "2025-11-30",
+        "DateD": "2025-12-30",
+        "MaxResultCount": 999
+      }
+    },
+    {
+      "endpoint": "GET /api/app/v2/HR/index/GetMonthlyOvertime",
+      "method": "GET",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 408.46,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "GET /api/app/v2/HR/index/GetCompensatoryLeaveHours",
+      "method": "GET",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 1546.51,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "GET /api/app/v2/HR/index/GetAnnualLeaveHours",
+      "method": "GET",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 715.19,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/GetProcessFlowWaitSign",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 455.24,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "empCode": [
+          "62810617-643d-0c39-aafb-3a197b3113fd"
+        ]
+      }
+    },
+    {
+      "endpoint": "POST /api/app/systems/GetSystemBoardList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 342.52,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "boardCategoryCode": "",
+        "searchText": "",
+        "Sorting": "dateA desc",
+        "MaxResultCount": 10,
+        "SkipCount": 0
+      }
+    },
+    {
+      "endpoint": "POST /api/app/systems/GetSystemBoard",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 487.61,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "id": "dafd3cf0-a160-4a6d-b283-f41fe25598b6"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/Shares/GetShareUploadList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 252.33,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "key1": "***MASKED***",
+        "key2": "***MASKED***",
+        "key3": "***MASKED***"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/systems/GetSystemPageListForReadPermission",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 388.83,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/users/GetUserBookmarkList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 198.62,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/Shares/GetTenantCompanyPhoto",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 198.41,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/v2/HR/personnel/EmployeeBaseData",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 3201.98,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "EmpId": "62810617-643d-0c39-aafb-3a197b3113fd"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/v2/HR/personnel/GetEmployeeContactList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 913.43,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "EmpId": "62810617-643d-0c39-aafb-3a197b3113fd"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/v2/HR/personnel/NewGetEmpCommInfo",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 960.41,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "EmpId": "62810617-643d-0c39-aafb-3a197b3113fd"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Org/GetOrgDeptLookup",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 474.92,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Org/GetOrgEmpListByOrg",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 515.24,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "orgType": "Dept",
+        "code": ""
+      }
+    },
+    {
+      "endpoint": "GET /api/app/v2/HR/share/GetEmpCommInfoCityLookup",
+      "method": "GET",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 533.24,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "GET /api/app/v2/HR/share/GetRelationshipCodeLookup",
+      "method": "GET",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 624.76,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "SkipCount": 0,
+        "MaxResultCount": 150
+      }
+    },
+    {
+      "endpoint": "POST /api/app/Shares/GetShareDefaultList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 227.99,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "GroupCode": "PortalVersion"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Org/GetOrgDeptLookup",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 401.51,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Org/GetOrgEmpListByOrg",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 441.2,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "code": "bcc1b9a9-ac97-1097-050f-3a197aa44f19",
+        "orgType": "Dept"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/WebHrProxy/api/app/reports/attend/get-protal-attend-detail",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 1442.21,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "dateA": "2025-12-01",
+        "dateD": "2025-12-31",
+        "employeeList": [
+          "62810617-643d-0c39-aafb-3a197b3113fd"
+        ]
+      }
+    },
+    {
+      "endpoint": "POST /api/app/v2/HR/attend/EmployeeAttendAbs",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 1149.48,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "AttendTypeList": [
+          "AttendType_Abs"
+        ],
+        "DateA": "2025-12-01",
+        "DateD": "2025-12-31",
+        "EmpIdList": [
+          "62810617-643d-0c39-aafb-3a197b3113fd"
+        ]
+      }
+    },
+    {
+      "endpoint": "POST /api/app/v2/HR/attend/EmployeeAttendOt",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 908.79,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "DateA": "2025-12-01",
+        "DateD": "2025-12-31",
+        "EmpId": "62810617-643d-0c39-aafb-3a197b3113fd",
+        "MaxResultCount": 999
+      }
+    },
+    {
+      "endpoint": "POST /api/app/systems/GetSystemJournalSearchByUsers",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 500,
+      "responseTimeMs": 1009.35,
+      "isSuccess": false,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "DateA": "2025-11-30T16:00:00.000Z",
+        "DateD": "2025-12-30T16:00:00.000Z",
+        "EmpId": [
+          "62810617-643d-0c39-aafb-3a197b3113fd"
+        ],
+        "MaxResultCount": 999
+      }
+    },
+    {
+      "endpoint": "POST /api/app/v2/HR/attend/EmployeeAttendCard",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 1401.61,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "DateA": "2025-12-01",
+        "DateD": "2025-12-31",
+        "EmpId": "62810617-643d-0c39-aafb-3a197b3113fd",
+        "ForgetCard": false,
+        "MaxResultCount": 999
+      }
+    },
+    {
+      "endpoint": "POST /api/app/v2/HR/attend/EmployeeAttendAbnormal",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 1043.12,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "DateA": "2025-12-01T00:00:00.000Z",
+        "DateD": "2025-12-31T00:00:00.000Z",
+        "EmpId": "62810617-643d-0c39-aafb-3a197b3113fd",
+        "MaxResultCount": 999,
+        "Remarked": false
+      }
+    },
+    {
+      "endpoint": "POST /api/app/Shares/GetShareDefaultList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 198.88,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "GroupCode": "PortalVersion"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/users/IsSalaryPassword",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 272.7,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "orgEmpCode": "62810617-643d-0c39-aafb-3a197b3113fd"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/v2/HR/salarySearch/GetSalarySearch",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 289.55,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "SalaryLockId": "薪資期數ID",
+        "SalaryPassword": "***MASKED***"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Org/GetOrgDeptLookup",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 404.22,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Org/GetOrgEmpLookup",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 444.96,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/Shares/GetShareCodeNameCodeList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 250.21,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/form/NewGetFormsDesignList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 374.02,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/GetProcessFlowView",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 264.28,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "MaxResultCount": 10,
+        "SkipCount": 0
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/GetFlowEngineProcess",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 187.26,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "processId": "流程ID"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/Shares/GetVisibleButtonsByView",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 234.93,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/form/GetFormsAppForView",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 228.96,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "formId": "表單ID"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/GetProcessFlowWaitSign",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 477.18,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "empCode": [
+          "62810617-643d-0c39-aafb-3a197b3113fd"
+        ]
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/form/NewGetFormsDesignList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 375.06,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/GetFlowEngineProcess",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 180.81,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "processId": "流程ID"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/apiCatalogs/GetApiCatalogList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 984.64,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "GET /api/app/Shares/GetAbpRolesLookup",
+      "method": "GET",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 227.58,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Org/GetOrgEmpLookup",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 416.63,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/systems/GetSystemPageList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 598.14,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/users/GetUsersWithRole",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 260.99,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "roleName": "admin"
+      }
+    },
+    {
+      "endpoint": "GET /api/app/Shares/GetAbpRolesOrAbpUsersLookup",
+      "method": "GET",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 218.87,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "Code": "R"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/Shares/GetShareDefaultList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 191.31,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "GroupCode": "PortalVersion"
+      }
+    },
+    {
+      "endpoint": "GET /api/app/NotifyProxy/api/app/jbnotifier-api/notifications",
+      "method": "GET",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 397.29,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "ReceiverOuterId": "員工ID",
+        "MaxResultCount": 999
+      }
+    },
+    {
+      "endpoint": "GET /api/app/NotifyProxy/GetNotifyApiKey",
+      "method": "GET",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 218.59,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/Shares/GetShareDefaultList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 193.6,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "GroupCode": "PortalVersion"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Org/GetOrgEmpList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 585.45,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Org/GetOrgEmpLookup",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 419.22,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Org/GetOrgDeptLookup",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 420.46,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/GetProcessFlowWaitSign",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 527.02,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "empCode": [
+          "員工ID"
+        ]
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/GetFlowEngineProcess",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 178.84,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "processFlowId": "流程ID"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/form/GetFormsAppForCheckSign",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 187.78,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "processFlowId": "流程ID",
+        "processNodeId": "節點ID"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/apiCatalogs/GetApiCatalogList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 990.82,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/Shares/GetVisibleButtonsByCheck",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 179.01,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "formsAppEmpCode": "員工ID",
+        "flowNodeCategoryCode": "類別代碼"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/form/GetFormsDesignHistoryList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 218.84,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/Shares/GetVisibleButtonsByApply",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 178.36,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "formsAppEmpCode": "員工ID"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Org/GetOrgEmpLookup",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 454.92,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Org/GetOrgDeptList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 405.48,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/apiCatalogs/CallDynamicApi",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 181.05,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "apiCatalogCode": "API目錄代碼",
+        "inputParameters": []
+      }
+    },
+    {
+      "endpoint": "POST /api/app/apiCatalogs/GetApiCatalogList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 835.37,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/Shares/GetShareDefaultList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 211.55,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "GroupCode": "PortalVersion"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Flow/GetFlowGroupList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 217.43,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Flow/GetFlowTreeList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 786.09,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "flowGroupId": "分組ID"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Flow/GetFlowTreeHistoryList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 463.72,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "code": "c53f961d-a434-4262-9da4-2f00088ae05b"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Flow/GetFlowLinkList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 403,
+      "responseTimeMs": 401.74,
+      "isSuccess": false,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "code": "c53f961d-a434-4262-9da4-2f00088ae05b"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Flow/GetFlowNodeList",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 235.73,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "flowTreeId": "流程樹ID"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Flow/SaveFlowTree",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 214.6,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "id": "流程樹ID",
+        "systemVersionName": "流程名稱",
+        "appearance": "base64預覽圖"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/Shares/GetShareCodeNameCodeList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 253.13,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "codeType": "代碼類型"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/form/GetFormsDesignRelFlowTreeByCode",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 218.63,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/form/NewGetFormsDesignList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 379.82,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/notifiers/GetEmailTemplateList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 2438.63,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {}
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/form/GetFormsDesign",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 403,
+      "responseTimeMs": 239.6,
+      "isSuccess": false,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/form/GetFormsDesignHistoryList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 205.23,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/flow/GetFlowTreeList",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 200,
+      "responseTimeMs": 530.46,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "flowGroupId": "分組ID"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/form/GetFormNotifyTimings",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 219.55,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/Process/GetProcessSerialNumbersByFormDesignId",
+      "method": "POST",
+      "testStrategy": "full_call",
+      "expectedStatus": 200,
+      "actualStatus": 403,
+      "responseTimeMs": 1266.55,
+      "isSuccess": false,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/form/GetFormsExtendColumnByFormsDesign",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 237.5,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
+      }
+    },
+    {
+      "endpoint": "POST /api/app/FlowEngine/form/GetFormsDesignDisplaySettings",
+      "method": "POST",
+      "testStrategy": "liveness_probe",
+      "expectedStatus": 400,
+      "actualStatus": 400,
+      "responseTimeMs": 191.72,
+      "isSuccess": true,
+      "errorMessage": "",
+      "validationErrors": [],
+      "requestParams": {
+        "formsDesignId": "798d2240-2f06-b427-fb41-3a1e0ec8f3e0"
+      }
+    }
+  ]
 }
